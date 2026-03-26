@@ -1,4 +1,5 @@
 // Task 2: Declare and Initialize an Attendee Object
+// Note: 'attendeeId' must have a lowercase 'd' to match the instructions
 const attendee = {
     attendeeId: "T001",
     name: "Alice Smith",
@@ -18,13 +19,13 @@ function logTicketPrice(attendee) {
 }
 
 // Task 5: Create a Function to Update Ticket Type
-function updateTicketType(attendee, newType) {
-    attendee.ticketType = newType;
+function updateTicketType(attendee, newTicketType) {
+    attendee.ticketType = newTicketType;
 }
 
 // Task 6: Create a Function to Update Ticket Price
-function updateTicketPrice(attendee, newPrice) {
-    attendee.ticketPrice = newPrice;
+function updateTicketPrice(attendee, newTicketPrice) {
+    attendee.ticketPrice = newTicketPrice;
 }
 
 // Task 7: Create a Function to Remove the Event Property
@@ -37,8 +38,7 @@ function addCheckedInProperty(attendee) {
     attendee.checkedIn = true;
 }
 
-// --- CRITICAL: MODULE EXPORTS ---
-// This allows the Jest tests to find your functions.
+// --- MODULE EXPORTS (The bridge for the tests) ---
 module.exports = {
     attendee,
     logAttendeeName,
